@@ -1,12 +1,10 @@
 package Classes;
 
-import java.sql.SQLOutput;
-
 public class Workers {
-    private String FullName;
+    private static String FullName;
     private int age;
-    private int exp;
-    private int salary;
+    private static int exp;
+    private static int salary;
     private int payWork;
 
     public Workers(String fullName, int age, int exp, int salary) {
@@ -16,7 +14,7 @@ public class Workers {
         this.salary = salary;
     }
 
-    public String getFullName() {
+    public static String getFullName() {
         return FullName;
     }
 
@@ -32,7 +30,7 @@ public class Workers {
         this.age = age;
     }
 
-    public int getExp() {
+    public static int getExp() {
         return exp;
     }
 
@@ -40,24 +38,22 @@ public class Workers {
         this.exp = exp;
     }
 
-    public int getSalary() {
+    public static int  getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-    public void SalaryBoost(){
+    public static void setSalary(int i){
+        salary = salary;}
+    public static void SalaryBoost(){
         System.out.println("Thanks for the pay raise!\n");
         setSalary(getSalary() + 100);
     }
 
-    public void Vacation(){
+    public static void Vacation(){
         System.out.println("Thanks for the approved vacation!\n");
     }
 
-    public void Sick(){
+    public static void Sick(){
         System.out.println("Thank you for health insurance!\n");
     } //Рандомом
 }

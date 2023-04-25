@@ -23,8 +23,8 @@ public class MainMenu extends Container {
         add(toCalculate);
         toCalculate.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Main.frame.logicWindow.setVisible(true);
-                Main.frame.menuWindow.setVisible(false);
+                MainFrame.logicWindow.setVisible(true);
+                MainFrame.menuWindow.setVisible(false);
             }
         });
 

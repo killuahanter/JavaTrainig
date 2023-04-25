@@ -88,7 +88,7 @@ public class MainLogic extends Container {
                     if(client.getRecords() < client.getToSave() || client.getToSave() <
                             client.getRecDel() ||
                             client.getRecords() < client.getRecords()){
-                        Main.frame.errorWindow.setVisible(true);
+                        MainFrame.errorWindow.setVisible(true);
                     }
                     client.setPayment(account.PaymentCounter(client.getToSave(), client.getProblem()));
                     text[6].setText(Integer.toString(client.getPayment()));
@@ -103,8 +103,8 @@ public class MainLogic extends Container {
         add(back);
         back.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Main.frame.menuWindow.setVisible(true);
-                Main.frame.logicWindow.setVisible(false);
+                MainFrame.menuWindow.setVisible(true);
+                MainFrame.logicWindow.setVisible(false);
             }
         });
     }

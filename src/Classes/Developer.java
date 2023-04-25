@@ -2,7 +2,7 @@ package Classes;
 
 public class Developer extends Workers {
     private String type;
-    private int NumFix;
+    private static int NumFix;
 
     public Developer(String fullName, int age, int exp, int salary, String type, int numFix) {
         super(fullName, age, exp, salary);
@@ -10,7 +10,7 @@ public class Developer extends Workers {
         NumFix = numFix;
     }
 
-    public int getNumFix() {
+    public static int getNumFix() {
         return NumFix;
     }
 

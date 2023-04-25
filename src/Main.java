@@ -1,10 +1,22 @@
+import Classes.Records;
 import GUI.MainFrame;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.*;
 
 public class Main {
     public static MainFrame frame;
-    public static void main(String[] args) {
-       MainFrame frame = new MainFrame();
-       frame.setVisible(true);
+    public static void main(String[] args) throws IOException {
+        MainFrame frame = new MainFrame();
+        frame.setVisible(true);
+        Socket socket = new Socket("localhost",8081);
+        PrintWriter out = new PrintWriter(socket.getOutputStream());
+        MyThread myThread = new MyThread();
+        myThread.start();
+        while (true) {
+            out.println(Integer.toString(Records.getNumbers()));
+        }
 
 
 

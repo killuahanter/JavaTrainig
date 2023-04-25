@@ -1,14 +1,14 @@
 package Classes;
 
 public class moderator extends Workers {
-    private int TotalAudio;
+    private static int TotalAudio;
 
     public moderator(String fullName, int age, int exp, int salary, int totalAudio) {
         super(fullName, age, exp, salary);
         TotalAudio = totalAudio;
     }
 
-    public int getTotalAudio() {
+    public static int getTotalAudio() {
         return TotalAudio;
     }
 

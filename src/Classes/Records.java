@@ -1,7 +1,7 @@
 package Classes;
 
 public class Records implements rec {
-    private int numbers;
+    private static int numbers;
     private String date;
     private int size;
 
@@ -11,7 +11,7 @@ public class Records implements rec {
         this.size = size;
     }
 
-    public int getNumbers() {
+    public static int getNumbers() {
         return numbers;
     }
 
@@ -44,4 +44,5 @@ public class Records implements rec {
         System.out.println("Classes.Records are deleting...\n");
         setNumbers(getNumbers() - a);
     }
+
 }
